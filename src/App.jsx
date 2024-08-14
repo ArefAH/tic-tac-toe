@@ -1,4 +1,4 @@
-import Player from "./assets/Componenets/Player/Player";
+import Player from "./assets/Componenets/Player";
 function App() {
   return (
     <div id="game-container">
