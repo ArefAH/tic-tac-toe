@@ -1,14 +1,16 @@
-export default function Log({ log }) {
+export default function Log({ turns }) {
     return (
-        <ol id="log">
-            {log.map((entry, index) => (
-                <li
-                    key={index}
-                    className={entry.highlighted ? "highlighted" : undefined}
-                >
-                    {entry.text}
-                </li>
-            ))}
-        </ol>
+      <ol id="log">
+        {turns.map((log) => {
+          return (
+            <li
+              key={`${log.square.row}, ${log.square.col}`}
+            >
+            {log.player} selected {log.square.row}, {log.square.col}
+            </li>
+          );
+        })}
+      </ol>
     );
-}
+  }
+  
